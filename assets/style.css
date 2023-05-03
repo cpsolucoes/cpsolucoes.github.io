@@ -114,7 +114,8 @@ body {
         position:absolute;
         width:40%;
         padding:0;
-        height: 250px;
+        /* height: 250px; */
+        height: 0;
 
         flex-direction: column;
         justify-content: center;
@@ -122,8 +123,14 @@ body {
         top:100px;
         right:20px;
         transition: 0.5s;
+    
+        overflow:hidden;
     }
 
+    .navbar__links.active {
+        height: 250px;
+    }
+    
     .navbar__links li {
         border-bottom: 2px solid gray;
     }
@@ -148,7 +155,8 @@ body {
         position:absolute;
         width:calc(100vw - 60px);
         padding:0;
-        height: 250px;
+        /* height: 250px; */
+        height: 0;
 
         flex-direction: column;
         justify-content: center;
@@ -156,6 +164,12 @@ body {
         top:100px;
         right:30px;
         transition: 0.5s;
+
+        overflow:hidden;
+    }
+
+    .navbar__links.active {
+        height: 250px;
     }
     
     .navbar__links li {

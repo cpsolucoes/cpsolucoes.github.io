@@ -36,3 +36,4 @@ document.addEventListener("DOMContentLoaded",() => {
 })
 
 
+// git config --global pull.rebase false

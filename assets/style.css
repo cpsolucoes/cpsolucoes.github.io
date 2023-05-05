@@ -5,29 +5,39 @@
 }
 
 :root {
-    --navbar--height:80px;
+    --navbar--height:60px;
     --navbar-color: darkblue;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar--height);
 }
+
+img { display: block;}
+
+/* UTILITY CLASSES */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* end of utility classes*/
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn {
-    padding: 0.6em;
-    border-radius: 0.2em;
+    padding: 0.3em 0.6em;
+    border-radius: 0.3em;
     background-color: aliceblue;
     color: black;
+    border: solid 1px black ;
+    box-shadow: none;
 }
 .btn:active {
-    padding: 0.5em;
-    background-color: aliceblue;
-    color: black;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .navbar {
@@ -98,20 +108,56 @@ body {
     display:none;
 }
 
-.anchor {
-    height:var(--navbar--height);
-}
 
 /* HERO SECTION */
 
-.hero {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url(../assets/images/hero_desktop.png);
-    background-size: cover;
-    background-position: left center;
-    width:100%;
-    min-height: 600px;
+
+
+.flex-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.hero {
+  
+    background-image: linear-gradient(45deg ,#1d95eb, purple);
+    min-height: 500px;
+    gap: 20px;
+    padding: var(--navbar--height) 20px 20px;
+}
+
+.hero__image__container img {
+    width:100%;
+}
+
+/* use la propiedad flex para determinar que la imagen inicie siendo un poco mayor que el texto 
+que ambas imagenes crezcan en la misma proporcion,
+que en cerca de los 650px haga wrapping 
+//el shrink no hace gran efecto// */
+.hero__image__container {
+    flex: 1 1 350px;
+}
+
+.hero__text__container {
+    flex: 1 2 300px;
+    font-size: 1.2rem;
+}
+
+.hero__text__container :is(h1, p) {
+    margin-bottom: 20px;
+}
+
+.hero__text__container button {
+    font-size: 1.2rem;
+    display:block;
+    margin-inline: auto;
+
+}
+
+
+
 
 
 /* TABLETS */
@@ -157,12 +203,7 @@ body {
     }
 
     /* HERO SECTION */
-    .hero {
-        background-image: url(../assets/images/hero_tablet.png);
-        background-position: left bottom;
-
-        min-height: 500px;
-    }
+    
 }
 /* TELEFONOS */
 @media (max-width: 499px) {
@@ -206,10 +247,7 @@ body {
     }
 
     /* HERO SECTION */
-    .hero {
-        background-image: url(../assets/images/hero_phone.png);
-        background-position: center bottom;
-
-        min-height: 500px;
+    .hero__text__container :is(h1, p) {
+        text-align: center;
     }
 }

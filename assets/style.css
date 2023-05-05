@@ -5,6 +5,9 @@
 }
 
 :root {
+    --color--yellow:#f2f02d;
+    --color--pink:#eb2971;
+    --color--blue:#1d95eb;
     --navbar--height:60px;
     --navbar-color: darkblue;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
@@ -43,7 +46,7 @@ body {
 .navbar {
     width:100%;
     height: var(--navbar--height);
-    background-color: var(--navbar-color);
+    background-image: linear-gradient(to right, var(--color--pink), rgba(173, 31, 83, 1) );
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
@@ -109,6 +112,10 @@ body {
 }
 
 
+section {
+    padding: 40px 20px;
+}
+
 /* HERO SECTION */
 
 
@@ -122,7 +129,7 @@ body {
 
 .hero {
   
-    background-image: linear-gradient(45deg ,#1d95eb, purple);
+    background-image: linear-gradient(45deg ,#1d95eb, aliceblue);
     min-height: 500px;
     gap: 20px;
     padding: var(--navbar--height) 20px 20px;
@@ -156,7 +163,61 @@ que en cerca de los 650px haga wrapping
 
 }
 
+/* end hero section */
 
+/* SERVICOS SECTION */
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .accordion-item {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion-header h3 {
+    margin: 0;
+  }
+  
+  .accordion-header .icon {
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+  }
+  
+  .accordion-header.active .icon {
+    transform: rotate(135deg);
+  }
+  
+  .accordion-content {
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height,padding  0.5s;
+  }
+  
+  
+  .accordion-content.active {
+    height: max-content;
+    padding:10px;
+  }
+
+/* end servicos section   */
 
 
 

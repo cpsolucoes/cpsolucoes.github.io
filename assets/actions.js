@@ -33,6 +33,19 @@ document.addEventListener("DOMContentLoaded",() => {
         menuBtnIcon.classList = "fa-solid fa-xmark"
 
     };
+
+    // SERVICOS
+
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach(accordionHeader => {
+    accordionHeader.addEventListener("click", () => {
+        const accordionContent = accordionHeader.nextElementSibling;
+        accordionHeader.classList.toggle("active");
+        accordionContent.classList.toggle("active");
+    });
+});
+
 })
 
 

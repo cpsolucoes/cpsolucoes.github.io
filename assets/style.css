@@ -208,7 +208,7 @@ que en cerca de los 650px haga wrapping
     padding: 0 10px;
     height: 0;
     overflow: hidden;
-    transition: height,padding  0.5s;
+    transition: all 0.5s;
   }
   
   

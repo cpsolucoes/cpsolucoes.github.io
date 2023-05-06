@@ -27,6 +27,7 @@ img { display: block;}
 
 /* end of utility classes*/
 
+/* CLASSES FOR ALL BODY */
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -42,6 +43,15 @@ body {
 .btn:active {
     transform: scale(0.95);
 }
+
+.card {
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: ghostwhite;
+    border: solid darkgray 2px;
+    box-shadow: 2px 2px 5px gray;
+}
+/* end classes for all body */
 
 .navbar {
     width:100%;
@@ -166,6 +176,26 @@ que en cerca de los 650px haga wrapping
 /* end hero section */
 
 /* SERVICOS SECTION */
+.servicos__gallery {
+    padding-top: 40px;
+}
+
+.servicos__section {
+    flex-direction: column;
+}
+.servicos__image__container img{
+    width:100%;
+}
+.servicos__image__container {
+    flex: 1 1 350px;
+}
+.servicos__text__container {
+    flex: 1 3 350px;
+}
+/* end servicos section   */
+
+
+/* FAQ SECTION */
 .accordion {
     width: 100%;
     max-width: 600px;
@@ -217,7 +247,6 @@ que en cerca de los 650px haga wrapping
     padding:10px;
   }
 
-/* end servicos section   */
 
 
 

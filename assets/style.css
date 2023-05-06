@@ -11,6 +11,8 @@
     --navbar--height:60px;
     --navbar-color: darkblue;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
+
+    --section--padding:40px 20px;
 }
 html {
     scroll-behavior: smooth;
@@ -25,13 +27,20 @@ img { display: block;}
     white-space: nowrap;
 }
 
+
 /* end of utility classes*/
 
 /* CLASSES FOR ALL BODY */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
 }
-
+.title {
+    font-size: 2.5rem;
+}
+.sub-title {
+    font-size: 1.8rem;
+}
 .btn {
     padding: 0.3em 0.6em;
     border-radius: 0.3em;
@@ -50,6 +59,10 @@ body {
     background-color: ghostwhite;
     border: solid darkgray 2px;
     box-shadow: 2px 2px 5px gray;
+}
+
+section {
+    padding: var(--section--padding);
 }
 /* end classes for all body */
 
@@ -122,9 +135,7 @@ body {
 }
 
 
-section {
-    padding: 40px 20px;
-}
+
 
 /* HERO SECTION */
 
@@ -178,20 +189,45 @@ que en cerca de los 650px haga wrapping
 /* SERVICOS SECTION */
 .servicos__gallery {
     padding-top: 40px;
+    
 }
 
 .servicos__section {
     flex-direction: column;
+    background-image: url(../assets/images/background_servicos.jpg);
+      
+    background-position: center;
+    background-size: cover;
+    padding:0;
+}
+.mask {
+    padding: var(--section--padding);
+    background-color: rgba(200,200,200, 0.7);
+}
+.gallery__item--body {
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.servicos__image__container{
+    flex: 0 2 550px;
+    margin: 0 auto;
+
 }
 .servicos__image__container img{
     width:100%;
 }
-.servicos__image__container {
-    flex: 1 1 350px;
+.gallery__item--body .card {
+    flex: 3 1 300px;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 600px;
+
+
 }
-.servicos__text__container {
-    flex: 1 3 350px;
-}
+
+
 /* end servicos section   */
 
 

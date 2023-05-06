@@ -63,34 +63,79 @@
         
         
         <section id="servicos" class="flex-container servicos__section">
+            <div class="mask">
             <div class="servicos__title">
-                <h2>Servicos</h2>
+                <h2 class="title">Servicos</h2>
             </div>
+
             <!-- clase servicos__gallery actualmente no tiene funcion -->
             <div class="servicos__gallery">
-                <article class="flex-container">
-                    <div class="card servicos__text__container">
-                        <h3>Impresoras</h3>
-                        <h4>Reparo de Impressoras</h4>
-                        <p>Nosso Laboratório de impressoras é equipado com 
-                            ferramentas e instrumentos que possibilitam um reparo técnico 
-                            adequado, além de contar com estoque de peças que permite um 
-                            diagnóstico preciso.
-                        </p>
-                        <h4>Locacao de Impressoras</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Porro maxime explicabo ipsum labore nihil? Debitis dolor dolores 
-                            voluptatem eum accusantium consectetur incidunt voluptatum vel 
-                            dicta! At aspernatur assumenda voluptates nobis.</p>
+                
+                <div class="servicos__gallery--item">
+                    <h3 class="gallery__item--title sub-title">Impresoras</h3>
+                    <div class="flex-container gallery__item--body">
+                        
+                        <article class="card">
+
+                            <h4>Reparo de Impressoras</h4>
+                            <p>Realizamos reparações de todo o tipo de impressoras, incluindo impressoras a laser, de jato de tinta e matriciais. Além disso, também oferecemos serviços de manutenção preventiva para evitar problemas futuros.</p>
+                        </article>
+                        
+                        <article class="card">
+                            <h4>Locacao de Impressoras</h4>
+                            <p>Oferecemos serviços de aluguel de impressoras, para quem precisa de uma impressora para um projeto temporário ou para quem não quer investir em uma nova.</p>
+                        </article>
+                        
+                        <figure class="servicos__image__container">
+                            <img src="assets/images/impressora_.png" alt="Impresora">
+                        </figure>
                     </div>
+                </div>
+                
+
+                <div class="servicos__gallery--item">
+                    <h3 class="gallery__item--title">Computadores e Laptops</h3>
+                    <div class="flex-container gallery__item--body">
+                        
+                        <article class="card">
+
+                            <h3>Reparação de computadores</h3>
+                            <p>Oferecemos serviços de reparação para computadores desktop e portáteis de todas as marcas. A nossa equipe altamente capacitada de técnicos pode resolver qualquer problema, desde falhas de hardware até problemas de software, e garantir um desempenho ótimo do seu equipamento.</p>
+                        </article>
+                        
+                       
+                        
+                        <figure class="servicos__image__container">
+                            <img src="assets/images/laptop_.png" alt="Laptop">
+                        </figure>
+                    </div>
+                </div>
+                
+
+                <div class="servicos__gallery--item">
+                    <h3 class="gallery__item--title sub-title">Tablets</h3>
+                    <div class="flex-container gallery__item--body">
+                        
+                        <article class="card">
+
+                            <h4>Reparação de tablets</h4>
+                            <p>Se o seu tablet não está funcionando corretamente ou tem uma tela quebrada, não se preocupe! Oferecemos serviços de reparação para todos os tipos de tablets. A nossa equipe de técnicos experientes pode resolver qualquer problema, desde a tela até a bateria.</p>
+                        </article>
+                        
+                       
+                        
+                        <figure class="servicos__image__container">
+                            <img src="assets/images/tablet_.png" alt="Tablet">
+                        </figure>
+                    </div>
+                </div>
+
+               
+
                     
-                    <figure class="servicos__image__container">
-                        <img src="assets/images/impressora_.png" alt="Impresora">
-                    </figure>
-                </article>
                 
             </div>
-            
+        </div>
         </section>
 
         <div  id="produtos"></div>
@@ -117,6 +162,8 @@
         <p>about</p>
         <p>about</p>
         <p>about</p>
+
+
         <section  id="faq">
             <h2>Servicos</h2>
             <div class="accordion">

@@ -13,6 +13,17 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <!-- Facebook -->
+        <meta property="og:title" content="Título de la página">
+        <meta property="og:description" content="Descripción breve de la página">
+        <meta property="og:image" content="URL de la imagen que se mostrará en Facebook">
+        <meta property="og:url" content="URL de la página web">
+        <meta property="og:type" content="tipo de contenido (p.ej. website, article, blog)">
+        <meta property="og:site_name" content="nombre de la página web">
+        <meta property="og:locale" content="código de idioma y país (p.ej. es_ES)">
+      
+
+
     <!-- own css and js -->
     <link rel="stylesheet" href="assets/style.css">
 
@@ -63,83 +74,103 @@
         
         
         <section id="servicos" class="flex-container servicos__section">
-            <div class="mask">
+
             <div class="servicos__title">
                 <h2 class="title">Servicos</h2>
             </div>
 
-            <!-- clase servicos__gallery actualmente no tiene funcion -->
             <div class="servicos__gallery">
-                
-                <div class="servicos__gallery--item">
-                    <h3 class="gallery__item--title sub-title">Impresoras</h3>
-                    <div class="flex-container gallery__item--body">
-                        
-                        <article class="card">
 
-                            <h4>Reparo de Impressoras</h4>
-                            <p>Realizamos reparações de todo o tipo de impressoras, incluindo impressoras a laser, de jato de tinta e matriciais. Além disso, também oferecemos serviços de manutenção preventiva para evitar problemas futuros.</p>
-                        </article>
-                        
-                        <article class="card">
-                            <h4>Locacao de Impressoras</h4>
-                            <p>Oferecemos serviços de aluguel de impressoras, para quem precisa de uma impressora para um projeto temporário ou para quem não quer investir em uma nova.</p>
-                        </article>
-                        
-                        <figure class="servicos__image__container">
-                            <img src="assets/images/impressora_.png" alt="Impresora">
-                        </figure>
+                <article class="card">
+                    <figure class="card__image__container">
+                        <img src="assets/images/impressora_.png" alt="Impresora">
+                    </figure>
+                    <div class="card__body">
+    
+                        <h3>Reparo de Impressoras</h3>
+                        <p>Realizamos reparações de todo o tipo de impressoras, incluindo impressoras a laser, 
+                            de jato de tinta e matriciais. Além disso, também oferecemos serviços de manutenção 
+                            preventiva para evitar problemas futuros.</p>
+                        <div class="container_btn">
+                            <button class="btn saber__mais">Saber Mais</button>
+                        </div>
                     </div>
-                </div>
+                </article>
                 
-
-                <div class="servicos__gallery--item">
-                    <h3 class="gallery__item--title">Computadores e Laptops</h3>
-                    <div class="flex-container gallery__item--body">
+                <article class="card">
+                    <figure class="card__image__container">
+                        <img src="assets/images/impressora_.png" alt="Impresora">
+                    </figure>
+                    <div class="card__body">
+                        <h3>Locacao de Impressoras</h3>
+                        <p>Oferecemos serviços de aluguel de impressoras, para quem precisa de uma impressora para um projeto temporário ou para quem não quer investir em uma nova.</p>
+                        <div class="container_btn">
+                            <button class="btn saber__mais">Saber Mais</button>
+                        </div>
                         
-                        <article class="card">
-
-                            <h3>Reparação de computadores</h3>
-                            <p>Oferecemos serviços de reparação para computadores desktop e portáteis de todas as marcas. A nossa equipe altamente capacitada de técnicos pode resolver qualquer problema, desde falhas de hardware até problemas de software, e garantir um desempenho ótimo do seu equipamento.</p>
-                        </article>
-                        
-                       
-                        
-                        <figure class="servicos__image__container">
-                            <img src="assets/images/laptop_.png" alt="Laptop">
-                        </figure>
                     </div>
-                </div>
+                </article>
                 
-
-                <div class="servicos__gallery--item">
-                    <h3 class="gallery__item--title sub-title">Tablets</h3>
-                    <div class="flex-container gallery__item--body">
-                        
-                        <article class="card">
-
-                            <h4>Reparação de tablets</h4>
-                            <p>Se o seu tablet não está funcionando corretamente ou tem uma tela quebrada, não se preocupe! Oferecemos serviços de reparação para todos os tipos de tablets. A nossa equipe de técnicos experientes pode resolver qualquer problema, desde a tela até a bateria.</p>
-                        </article>
-                        
-                       
-                        
-                        <figure class="servicos__image__container">
-                            <img src="assets/images/tablet_.png" alt="Tablet">
-                        </figure>
-                    </div>
-                </div>
-
+                
                
+                <article class="card">
+                    <figure class="card__image__container">
+                        <img src="assets/images/laptop_.png" alt="Laptop">
 
-                    
+                    </figure>
+                    <div class="card__body">
+                        <h3>Reparação de computadores</h3>
+                        <p>Oferecemos serviços de reparação para computadores desktop e portáteis de todas as marcas. A nossa equipe altamente capacitada de técnicos pode resolver qualquer problema, desde falhas de hardware até problemas de software, e garantir um desempenho ótimo do seu equipamento.</p>
+                        
+                        <div class="container_btn">
+                            <button class="btn saber__mais">Saber Mais</button>
+                        </div>
+                    </div>
+                </article>
                 
-            </div>
-        </div>
+                <article class="card">
+                    <figure class="card__image__container">
+                        <img src="assets/images/tablet_.png" alt="Tablet">
+
+
+                    </figure>
+                    <div class="card__body">
+                        <h3>Reparação de tablets</h3>
+                        <p>Se o seu tablet não está funcionando corretamente ou tem uma tela quebrada, não se preocupe! Oferecemos serviços de reparação para todos os tipos de tablets. A nossa equipe de técnicos experientes pode resolver qualquer problema, desde a tela até a bateria.</p>
+                        <div class="container_btn">
+                            <button class="btn saber__mais">Saber Mais</button>
+                        </div>
+                        
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card__image__container">
+                        <img src="assets/images/samsung_.png" alt="Tablet">
+                    </figure>
+                    <div class="card__body">
+                        <h3>Reparação de Celulares</h3>
+                        <p>Consertamos seu celular danificado em tempo recorde. Desde telas quebradas  
+                            problemas de carga, nossos especialistas estão prontos para resolver qualquer 
+                            problema em seu telefone celular</p>
+                        <div class="container_btn">
+                            <button class="btn saber__mais">Saber Mais</button>
+                        </div>
+                        
+                    </div>
+                </article>
+
+                
+
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#1d95eb" fill-opacity="1" d="M0,192L60,165.3C120,139,240,85,360,80C480,75,600,117,720,122.7C840,128,960,96,1080,85.3C1200,75,1320,85,1380,90.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        
+            
         </section>
 
-        <div  id="produtos"></div>
-        <h2>Proutos</h2>
+        <section  id="produtos" class="productos__section">
+
+            <h2 class="title">Produtos</h2>
+            <p>produtos</p>
         <p>produtos</p>
         <p>produtos</p>
         <p>produtos</p>
@@ -149,7 +180,10 @@
         <p>produtos</p>
         <p>produtos</p>
         <p>produtos</p>
-        <p>produtos</p>
+            
+        </section>
+
+        
         <div  id="about"></div>
         <h2 >About</h2>
         <p>about</p>

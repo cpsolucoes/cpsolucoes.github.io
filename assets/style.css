@@ -8,11 +8,12 @@
     --color--yellow:#f2f02d;
     --color--pink:#eb2971;
     --color--blue:#1d95eb;
+    --color--pink--alpha:rgba(235, 41, 113, 0.5);
     --navbar--height:60px;
     --navbar-color: darkblue;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
 
-    --section--padding:40px 20px;
+    --section--padding:40px 30px;
 }
 html {
     scroll-behavior: smooth;
@@ -33,10 +34,12 @@ img { display: block;}
 /* CLASSES FOR ALL BODY */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 }
 .title {
     font-size: 2.5rem;
+    text-align: center;
+    text-shadow:2px 2px 10px #fff;
 }
 .sub-title {
     font-size: 1.8rem;
@@ -77,6 +80,7 @@ section {
     /* overflow: hidden; */
 
     position:fixed;
+    z-index: 100;
 }
 
 .navbar__links {
@@ -153,7 +157,7 @@ section {
     background-image: linear-gradient(45deg ,#1d95eb, aliceblue);
     min-height: 500px;
     gap: 20px;
-    padding: var(--navbar--height) 20px 20px;
+    padding-top: var(--navbar--height);
 }
 
 .hero__image__container img {
@@ -187,46 +191,92 @@ que en cerca de los 650px haga wrapping
 /* end hero section */
 
 /* SERVICOS SECTION */
-.servicos__gallery {
-    padding-top: 40px;
-    
-}
+
 
 .servicos__section {
     flex-direction: column;
-    background-image: url(../assets/images/background_servicos.jpg);
+    background-image: linear-gradient(rgba(200,200,200, 0.5),
+    rgba(200,200,200, 0.5)),
+    url(../assets/images/background_servicos.jpg);
       
     background-position: center;
     background-size: cover;
-    padding:0;
+    padding-bottom:12rem;
+
+    overflow: hidden;
+    position:relative;
 }
-.mask {
-    padding: var(--section--padding);
-    background-color: rgba(200,200,200, 0.7);
+
+.servicos__gallery {
+    padding-top: 40px;
+    width:100%; 
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 1rem;
 }
-.gallery__item--body {
-    align-items: flex-start;
-    gap: 20px;
+
+.servicos__gallery .card {
+    width:100%;
+    display: grid;
 }
 
 
-.servicos__image__container{
-    flex: 0 2 550px;
-    margin: 0 auto;
-
-}
-.servicos__image__container img{
+.card__image__container{
     width:100%;
 }
-.gallery__item--body .card {
-    flex: 3 1 300px;
+.card__image__container img{
+    width:100%;
+}
+.card__body{
+    margin-top: 20px;
     line-height: 1.4;
-    margin: 0 auto;
-    max-width: 600px;
-
-
+}
+.card__body:first-child{
+    margin-top:0;
 }
 
+.saber__mais{
+    display: block;
+    color: #fff;
+    background: var(--color--pink);
+    margin: 0 auto;
+
+}
+.container_btn {
+    align-self: end;
+    margin-top: 20px;
+    position: relative;
+}
+.saber__mais:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0.7;
+    background-color: var(--color--pink--alpha);
+    animation: ripple 0.6s ease-out;
+  }
+  @keyframes ripple {
+    to {
+      transform: scaleY(6) scaleX(0.8);
+      opacity: 0;
+    }
+  }
+
+
+
+.wave {
+    position:absolute;
+    bottom:0;
+    left:0;
+
+    width:100%;
+       
+}
 
 /* end servicos section   */
 
@@ -283,11 +333,20 @@ que en cerca de los 650px haga wrapping
     padding:10px;
   }
 
+/* end FAQ section */
+
+/* PRODUTOS SECTION */
+.productos__section{
+    position:relative;
+    padding-top: 0;
+    background-color: var(--color--blue);
+}
 
 
+/* end PRODUTOS section */
 
 /* TABLETS */
-@media (min-width: 500px) and (max-width: 900px) {
+@media (max-width: 900px) {
     .navbar__links li a:hover {
         cursor:pointer;
         background-color:unset;
@@ -329,6 +388,12 @@ que en cerca de los 650px haga wrapping
     }
 
     /* HERO SECTION */
+
+    /* SERVICOS SECTION */
+    .servicos__section{
+        padding-bottom: 10rem;
+    }
+    
     
 }
 /* TELEFONOS */
@@ -376,4 +441,9 @@ que en cerca de los 650px haga wrapping
     .hero__text__container :is(h1, p) {
         text-align: center;
     }
+    /* SERVICOS SECTION */
+    .servicos__section{
+        padding-bottom: 6rem;
+    }
+    
 }

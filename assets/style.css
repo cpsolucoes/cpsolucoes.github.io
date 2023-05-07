@@ -40,6 +40,7 @@ body {
     font-size: 2.5rem;
     text-align: center;
     text-shadow:2px 2px 10px #fff;
+    margin-bottom: 40px;
 }
 .sub-title {
     font-size: 1.8rem;
@@ -208,7 +209,6 @@ que en cerca de los 650px haga wrapping
 }
 
 .servicos__gallery {
-    padding-top: 40px;
     width:100%; 
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
@@ -282,6 +282,10 @@ que en cerca de los 650px haga wrapping
 
 
 /* FAQ SECTION */
+.faq__section {
+    background-color: var(--color--blue);
+}
+
 .accordion {
     width: 100%;
     max-width: 600px;
@@ -335,15 +339,18 @@ que en cerca de los 650px haga wrapping
 
 /* end FAQ section */
 
-/* PRODUTOS SECTION */
-.productos__section{
-    position:relative;
-    padding-top: 0;
-    background-color: var(--color--blue);
+/* CONTATO SECTION */
+.contato__section {
+
 }
 
+.google__map {
 
-/* end PRODUTOS section */
+}
+.contact_form {
+    display:block;
+}
+/* end CONTATO section */
 
 /* TABLETS */
 @media (max-width: 900px) {

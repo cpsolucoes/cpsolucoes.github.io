@@ -8,7 +8,7 @@
     --color--yellow:#f2f02d;
     --color--pink:#eb2971;
     --color--blue:#1d95eb;
-    --color--pink--alpha:rgba(235, 41, 113, 0.5);
+    --color--pink--alpha:rgba(235, 41, 113, 0.9);
     --navbar--height:70px;
     --navbar-color: darkblue;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
@@ -28,7 +28,9 @@ img { display: block;}
     white-space: nowrap;
 }
 
-
+.centred{
+    margin-inline: auto;
+}
 /* end of utility classes*/
 
 /* CLASSES FOR ALL BODY */
@@ -42,13 +44,12 @@ body {
     text-shadow:2px 2px 10px #fff;
     margin-bottom: 40px;
 }
-.sub-title {
-    font-size: 1.8rem;
+.subtitle {
+    font-size: 1.6rem;
 }
 .btn {
     text-decoration: none;
     display:block;
-    margin-inline: auto;
     width:max-content;
     padding: 0.3em 0.6em;
     border-radius: 0.3em;
@@ -129,11 +130,9 @@ section {
     align-items: center;
 }
 .logo img {  
-    /* width: 40px; */
-    padding:15px;
-    border-radius:22px;
-    background-color: rgba(50,50,50,0.6);
+    width:100%;
 }
+
 
 .hamburguer {
     display:none;
@@ -236,6 +235,8 @@ que en cerca de los 650px haga wrapping
 }
 
 .saber__mais{
+    border:none;
+    font-size:1.2rem;
     display: block;
     color: #fff;
     background: var(--color--pink);
@@ -345,24 +346,31 @@ que en cerca de los 650px haga wrapping
     opacity: 0.8;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0824b4 10px ),
      repeating-linear-gradient( #1D95EB55, #1D95EB );
+    padding: 0;
 }
+.mask {
+    background-color: rgba(255,255,255,0.4);
+    padding: var(--section--padding);
+}
+
 .flex-contato{
-    gap:20px;
-    justify-content: space-around;
+    gap:30px;
+    justify-content: center;
     align-items: flex-start;
-    max-width: 1000px;
     margin-inline: auto;
 }
 
 .google__map {
-    width: 100%;
-    max-width: 500px;
-    min-width: 250px;
-    border:solid rgba(0,0,0,0.5) 2px;
-
+    width: 45%;
+    min-width: 300px;
 }
+
 .google__map iframe{
     width:100%;
+}
+.form__container {
+    width:45%;
+    min-width: 300px;
 }
 .contact_form {
     padding: 30px;
@@ -370,11 +378,11 @@ que en cerca de los 650px haga wrapping
     background-color: rgba(255,255,255,0.4);
 
     width:100%;
-    min-width: 250px;
-    max-width: 400px;
 
-
-
+}
+.contact_form .saber__mais {
+    width:max-content;
+    font-size:1.2rem;
 }
 .contact_form label{
     font-size: 1.5rem;
@@ -401,18 +409,21 @@ que en cerca de los 650px haga wrapping
         background-color:unset;
     
     }
-    
+    .navbar__links li {
+        margin-bottom: 1rem;
+    }
+    .navbar__links li:last-child {
+        margin-bottom: 0;
+    }
     .hamburguer {
         display:block;
     }
     .navbar__links {
-        color:black;
-        background-color:var(--navbar--scrolled--color);
+        background-color:var(--color--pink);
 
         position:absolute;
         width:40%;
         padding:0;
-        /* height: 250px; */
         height: 0;
 
         flex-direction: column;
@@ -442,8 +453,12 @@ que en cerca de los 650px haga wrapping
     .servicos__section{
         padding-bottom: 10rem;
     }
-    
-    
+    /* CONTACT SECTION */
+    .form__container ,.google__map {
+        width:100%;
+        min-width:250px;
+    } 
+  
 }
 /* TELEFONOS */
 @media (max-width: 499px) {
@@ -456,23 +471,13 @@ que en cerca de los 650px haga wrapping
         display:block;
     }
     .navbar__links {
-        color:black;
-        background-color: var(--navbar--scrolled--color);
 
         position:absolute;
-        width:calc(100vw - 60px);
-        padding:0;
-        /* height: 250px; */
-        height: 0;
-
-        flex-direction: column;
-        justify-content: center;
+        width:calc(100vw - 100px);
 
         top:100px;
-        right:30px;
-        transition: 0.5s;
+        right:40px;
 
-        overflow:hidden;
     }
 
     .navbar__links.active {

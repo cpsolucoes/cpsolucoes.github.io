@@ -341,14 +341,56 @@ que en cerca de los 650px haga wrapping
 
 /* CONTATO SECTION */
 .contato__section {
-
+    background-color: #0824b4;
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0824b4 10px ),
+     repeating-linear-gradient( #1D95EB55, #1D95EB );
+}
+.flex-contato{
+    gap:20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin-inline: auto;
 }
 
 .google__map {
+    width: 100%;
+    max-width: 500px;
+    min-width: 250px;
+    border:solid rgba(0,0,0,0.5) 2px;
 
 }
+.google__map iframe{
+    width:100%;
+}
 .contact_form {
+    padding: 30px;
+    border-radius:30px;
+    background-color: rgba(255,255,255,0.4);
+
+    width:100%;
+    min-width: 250px;
+    max-width: 400px;
+
+
+
+}
+.contact_form label{
+    font-size: 1.5rem;
+    
     display:block;
+    margin-bottom: 30px;
+
+}
+.contact_form input {
+    font-size: inherit;
+    width:100%;
+    border-radius: 0.5rem;
+    display:block;
+    border:gray;
+    padding: 0.6rem 0.8rem;
+
 }
 /* end CONTATO section */
 
@@ -436,6 +478,8 @@ que en cerca de los 650px haga wrapping
     .navbar__links.active {
         height: 250px;
     }
+
+    
     
     .navbar__links li {
         border-bottom: 2px solid gray;
@@ -452,5 +496,11 @@ que en cerca de los 650px haga wrapping
     .servicos__section{
         padding-bottom: 6rem;
     }
-    
+    /* CONTATO SECTION */
+    .google__map{
+        margin: 0 auto;
+    }
+    .contact_form{
+        margin: 0 auto;
+    }
 }

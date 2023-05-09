@@ -12,6 +12,7 @@
     --navbar--height:70px;
     --navbar-color: darkblue;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
+    --navbar--background: linear-gradient(to right, rgb(146, 19, 108), rgb(173, 31, 83),var(--color--pink));
 
     --section--padding:40px 30px;
 }
@@ -78,16 +79,16 @@ section {
 .navbar {
     width:100%;
     height: var(--navbar--height);
-    background-image: linear-gradient(to right, var(--color--pink), rgba(173, 31, 83, 1) );
-    padding: 0 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* overflow: hidden; */
-
+    background-image: var(--navbar--background);
     position:fixed;
     z-index: 100;
 }
+
 
 .navbar__links {
     list-style: none;
@@ -125,12 +126,13 @@ section {
 }
 
 .logo {
+
     margin: 0;
     display:flex;
     align-items: center;
 }
 .logo img {  
-    width:100%;
+    width:60px;
 }
 
 
@@ -419,7 +421,7 @@ que en cerca de los 650px haga wrapping
         display:block;
     }
     .navbar__links {
-        background-color:var(--color--pink);
+        background-image:var(--navbar--background);
 
         position:absolute;
         width:40%;

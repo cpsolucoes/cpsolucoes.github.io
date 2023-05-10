@@ -32,6 +32,8 @@ img { display: block;}
 .centred{
     margin-inline: auto;
 }
+
+
 /* end of utility classes*/
 
 /* CLASSES FOR ALL BODY */
@@ -222,12 +224,15 @@ que en cerca de los 650px haga wrapping
 }
 
 
-.card__image__container{
+/* .card__image__container{
     width:100%;
-}
+} */
 .card__image__container img{
     width:100%;
 }
+/* .card__image__container img:first-child{
+    margin-bottom: -50px;
+} */
 .card__body{
     margin-top: 20px;
     line-height: 1.4;

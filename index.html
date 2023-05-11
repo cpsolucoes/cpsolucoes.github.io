@@ -32,8 +32,9 @@
     
     <!-- own css and js -->
     <link rel="stylesheet" href="assets/style.css">
-
-
+   
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="assets/actions.js"></script>
 
     <title>CP Solucoes</title>
@@ -321,6 +322,45 @@
               
         </section>
 
+        <section id="valoraciones" class="section__valoraciones" >
+            
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/images/laptop_.png" alt=""></div>
+                
+                </div>
+                
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                
+            
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+            <div class="pagination_">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"><img src="assets/icons/back.svg" alt="arrow back"></div>
+                <div class="swiper-button-next"><img src="assets/icons/next.svg" alt="arrow next"></div>
+            </div>
+
+
+ 
+ 
+
+        </section>
+
         <section id="contato" class="contato__section">
         <div class="mask" >
             <h2 class="title">Contato</h2>
@@ -345,5 +385,65 @@
             </div>
         </div>
         </section>
+
+     <!-- Initialize Swiper -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+
+    const swiper = new Swiper('.swiper', {
+
+
+        // Default parameters
+        speed: 400,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            400: {
+            slidesPerView: 2,
+            spaceBetween: 20
+            },
+            // when window width is >= 480px
+            499: {
+            slidesPerView: 3,
+            spaceBetween: 30
+            },
+            // when window width is >= 640px
+            900: {
+            slidesPerView: 4,
+            spaceBetween: 40
+            }
+        },
+           
+        
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+
+
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+
+    });
+  </script>
+
 </body>
 </html>

@@ -371,6 +371,44 @@ resto margin-botom para la primera card */
 
 /* end FAQ section */
 
+/* VALORACIONES SECTION */
+
+.section__valoraciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper {
+    width: 80%;
+    max-height: 300px;
+    border: red solid 2px;
+  }
+
+.swiper-slide > img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pagination_ {
+    position: absolute;
+    width: 90%;
+}
+.pagination_ div[class^="swiper-button"]::after {
+    display: none;
+}
+
+/* .pagination_ div[class^="swiper-button"] {
+    width:60px;
+    height: 60px;   
+}
+
+.pagination_ div[class^="swiper-button"] img {
+    width:100%;
+} */
+
+/* end VALORACIONES section */
+
 /* CONTATO SECTION */
 .contato__section {
     background-color: #0824b4;

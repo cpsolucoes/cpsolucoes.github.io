@@ -44,6 +44,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     /* font-size: 1.2rem; */
 }
+
+
+.flex-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-vertical {
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .title {
     font-size: 2.5rem;
     text-align: center;
@@ -51,6 +66,7 @@ body {
     margin-bottom: 40px;
 }
 .subtitle {
+    text-align: center;
     font-size: 1.6rem;
 }
 .btn {
@@ -152,12 +168,6 @@ section {
 
 
 
-.flex-container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .hero {
   
@@ -219,12 +229,7 @@ que en cerca de los 650px haga wrapping
     gap: 1rem;
 }
 
-.flex-vertical {
-    display:flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .servicos__gallery .card {
     width:100%;
@@ -379,10 +384,15 @@ resto margin-botom para la primera card */
     align-items: center;
 }
 .swiper {
+    --carrusel--height:400px;
     width: 80%;
-    max-height: 300px;
+    max-height: var(--carrusel--height);
     border: red solid 2px;
   }
+
+.swiper-slide.card {
+    height: var(--carrusel--height);
+}
 
 .swiper-slide > img {
     width: 100%;
@@ -411,16 +421,17 @@ resto margin-botom para la primera card */
 
 /* CONTATO SECTION */
 .contato__section {
-    background-color: #0824b4;
+    background-image: var(--background--image);
+    /* background-color: #0824b4;
     opacity: 0.8;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0824b4 10px ),
      repeating-linear-gradient( #1D95EB55, #1D95EB );
-    padding: 0;
+    padding: 0; */
 }
-.mask {
+/* .mask {
     background-color: rgba(255,255,255,0.4);
     padding: var(--section--padding);
-}
+} */
 
 .flex-contato{
     gap:30px;
@@ -434,33 +445,39 @@ resto margin-botom para la primera card */
     min-width: 300px;
 }
 
+.flex-vertical.google__map, .flex-vertical.form__container {
+    gap: 30px;
+}
+
 .google__map iframe{
     width:100%;
 }
+
 .form__container {
     width:45%;
     min-width: 300px;
 }
 .contact_form {
-    padding: 30px;
-    border-radius:30px;
+    --font--size:1rem;
+    font-size: var(--font--size);
+
+    padding: 20px;
+    border-radius:10px;
     background-color: rgba(255,255,255,0.4);
-
     width:100%;
-
+    
 }
 .contact_form .saber__mais {
     width:max-content;
     font-size:1.2rem;
 }
 .contact_form label{
-    font-size: 1.5rem;
-    
+    font-size: inherit;
     display:block;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 
 }
-.contact_form input {
+.contact_form input, .contact_form textarea {
     font-size: inherit;
     width:100%;
     border-radius: 0.5rem;
@@ -468,6 +485,7 @@ resto margin-botom para la primera card */
     border:gray;
     padding: 0.6rem 0.8rem;
 
+    margin-bottom: 20px;
 }
 /* end CONTATO section */
 

@@ -284,9 +284,9 @@ que en cerca de los 650px haga wrapping
 
 /* por alguna razon la imagen tiene margen extra,
 resto margin-botom para la primera card */
-.servicos__gallery .card:first-child .card__image__container img {
-    /* margin-bottom: -2rem; */
-}
+/* .servicos__gallery .card:first-child .card__image__container img {
+    margin-bottom: -2rem;
+} */
 
 .card__body{
     /* margin-top: 20px; */
@@ -380,6 +380,7 @@ resto margin-botom para la primera card */
 
 
     padding-bottom: var(--section--padding--bottom);
+    overflow: hidden;
 }
 .section__valoraciones .subtitle {
     line-height: 1.6;
@@ -387,6 +388,7 @@ resto margin-botom para la primera card */
     margin-inline: auto;
 }
 .big__container__swiper {
+    width:100%;
     margin-top: 60px;
     display: flex;
     justify-content: center;

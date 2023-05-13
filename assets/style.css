@@ -67,7 +67,8 @@ body {
 }
 .subtitle {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 .btn {
     text-decoration: none;
@@ -83,7 +84,38 @@ body {
 .btn:active {
     transform: scale(0.95);
 }
+.saber__mais{
+    position:relative;
+    border:none;
+    font-size:1.2rem;
+    color: #fff;
+    background: var(--color--pink);
+    margin: 0 auto;
+    line-height: initial;
+}
 
+.saber__mais:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0.5;
+    background-color: var(--color--pink);
+    animation: ripple 0.6s ease-out reverse;
+  }
+  @keyframes ripple {
+    to {
+      transform: scaleY(4) scaleX(2);
+      opacity: 0;
+    }
+  }
+.btn-hero {
+    font-size:max(1.2rem, 2vw);
+}
 .card {
     padding: 1em;
     border-radius: 0.5em;
@@ -166,9 +198,6 @@ section {
 
 /* HERO SECTION */
 
-
-
-
 .hero {
   
     background-image: linear-gradient(45deg ,#1d95eb, aliceblue);
@@ -225,7 +254,7 @@ que en cerca de los 650px haga wrapping
 .servicos__gallery {
     width:100%; 
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
     gap: 1rem;
 }
 
@@ -242,18 +271,13 @@ que en cerca de los 650px haga wrapping
 .card__image__container{
     width:100%;
     
-    /* propiedades bajo prueba */
     display: grid;
     align-self:flex-start;
-    /* max-height: 150px; */
     margin-bottom: 10px;
 }
 
 .card__image__container img{
     width:100%;
-
-    /* propiedades bajo prueba */
-    /* max-height:inherit; */
     object-fit: contain;
     display: block;
 }
@@ -261,7 +285,7 @@ que en cerca de los 650px haga wrapping
 /* por alguna razon la imagen tiene margen extra,
 resto margin-botom para la primera card */
 .servicos__gallery .card:first-child .card__image__container img {
-    margin-bottom: -2rem;
+    /* margin-bottom: -2rem; */
 }
 
 .card__body{
@@ -273,36 +297,6 @@ resto margin-botom para la primera card */
     margin-top:0;
 }
 
-.saber__mais{
-    position:relative;
-    border:none;
-    font-size:1.2rem;
-    display: block;
-    color: #fff;
-    background: var(--color--pink);
-    margin: 0 auto;
-
-}
-
-.saber__mais:hover::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    transform: scale(0);
-    opacity: 0.5;
-    background-color: var(--color--pink);
-    animation: ripple 0.6s ease-out reverse;
-  }
-  @keyframes ripple {
-    to {
-      transform: scaleY(4) scaleX(2);
-      opacity: 0;
-    }
-  }
 
 
 
@@ -348,29 +342,27 @@ resto margin-botom para la primera card */
     margin: 0;
   }
   
-  .accordion-header .icon {
-    width: 12px;
-    height: 12px;
-    border-top: 2px solid #333;
-    border-right: 2px solid #333;
-    transform: rotate(45deg);
+  .accordion-header i{
+    padding-right: 10px;
+    padding-left: 15px;
+ 
     transition: transform 0.5s;
   }
-  
-  .accordion-header.active .icon {
-    transform: rotate(135deg);
+
+  .accordion-header.active i {
+    transform: rotate(90deg);
   }
   
   .accordion-content {
     padding: 0 10px;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.5s;
+    transition: max-height 0.5s;
   }
   
   
   .accordion-content.active {
-    height: max-content;
+    max-height: 80px;
     padding:10px;
   }
 
@@ -379,30 +371,53 @@ resto margin-botom para la primera card */
 /* VALORACIONES SECTION */
 
 .section__valoraciones {
+    background-color: var(--color--blue);
+    position: relative;
+
+    --section--padding--bottom: 80px;
+    --pagination--margin--bottom: 50px;
+    --carrusel--height:450px;
+
+
+    padding-bottom: var(--section--padding--bottom);
+}
+.section__valoraciones .subtitle {
+    line-height: 1.6;
+    max-width: 800px;
+    margin-inline: auto;
+}
+.big__container__swiper {
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .swiper {
-    --carrusel--height:400px;
     width: 85%;
     max-height: var(--carrusel--height);
-    border: red solid 2px;
+
+    /* añadiendo espacio para ver borde de cards */
+    padding:0.6rem;
   }
 
 .swiper-slide.card {
-    height: var(--carrusel--height);
+    /* "restando" espacio para ver borde de cards */
+    height: calc(var(--carrusel--height) - 1rem);
+
     text-align: center;
     position: relative;
+
+    box-shadow: none;
+    border: none;
 }
 
 .swiper-slide.card::before {
+    border-radius: inherit;
     content:"";
     position:absolute;
     width:100%;
     height: 100px;
-    background-image: linear-gradient(to right,gold, var(--color--yellow)
-    );
+    background-image: linear-gradient(to right,gold, var(--color--yellow));
     top:0;
     left:0;
 }
@@ -440,18 +455,36 @@ resto margin-botom para la primera card */
     position: absolute;
     width: 95%;
 }
-.pagination_ div[class^="swiper-button"]::after {
+
+.swiper-pagination {
+    /* aplicando margin con variable definida en .section__valoraciones */
+    transform:translateY(calc((-1* var(--section--padding--bottom)) + var(--pagination--margin--bottom)));
+
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--color--pink);
+    transform: translateY(3px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+/* .pagination_ div[class^="swiper-button"]::after {
+    display: none;
+} */
+
+.swiper-button-prev::after, .swiper-button-next::after {
     display: none;
 }
-
-/* .pagination_ div[class^="swiper-button"] {
-    width:60px;
-    height: 60px;   
+.swiper-button-prev img, .swiper-button-next img {
+    border-radius:50%;
+    background-color: rgba(0,0,0,0);
+    transition: 1s ease transform, 1s ease background-color ;
+}
+.swiper-button-prev img:hover, .swiper-button-next img:hover{
+    transform: scale(1.25);
+    background-color: ghostwhite;
 }
 
-.pagination_ div[class^="swiper-button"] img {
-    width:100%;
-} */
 
 /* end VALORACIONES section */
 
@@ -479,10 +512,6 @@ resto margin-botom para la primera card */
 .google__map {
     width: 45%;
     min-width: 300px;
-}
-
-.flex-vertical.google__map, .flex-vertical.form__container {
-    gap: 30px;
 }
 
 .google__map iframe{
@@ -634,7 +663,13 @@ resto margin-botom para la primera card */
 
     /* VALORACIONES SECTION */
     .swiper {
-        width: 100%;
-        
+        width: 100%;  
       }
+      .big__container__swiper {
+        margin-top: 20px;
+      }
+    
+      .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
 }

@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 :root {
     --color--yellow:#f2f02d;
@@ -14,7 +18,7 @@
     --navbar--height:60px;
 
 
-    --navbar-color: darkblue;
+    --navbar-color: #00008b;
     --navbar--scrolled--color:  rgba(0,0,119, 0.8);
 
     --navbar--background: linear-gradient(to right, rgb(146, 19, 108), rgb(173, 31, 83),var(--color--pink));
@@ -30,31 +34,30 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--navbar--height);
+    font-family: 'Nunito', sans-serif;
 }
+
+body {
+    --max--width--document:1600px;
+    max-width:var(--max--width--document);
+    margin-inline: auto; 
+}
+
 
 img { display: block;}
 
-/* UTILITY CLASSES */
 
 .nowrap {
     white-space: nowrap;
 }
-
+.no-dots {
+    list-style: none;
+}
 .centred{
     margin-inline: auto;
 }
 
-
-/* end of utility classes*/
-
 /* CLASSES FOR ALL BODY */
-body {
-    --max--width--document:1600px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-size: 1.2rem; */
-    max-width:var(--max--width--document);
-    margin-inline: auto;
-}
 
 
 .flex-container {
@@ -134,9 +137,10 @@ body {
       opacity: 0;
     }
   } */
-
-.btn-hero {
+.btn-big {
     font-size:max(1.2rem, 2vw);
+}
+.btn-hero {
     margin-top: 60px;
 }
 .card {
@@ -153,6 +157,7 @@ section {
 }
 /* end classes for all body */
 
+/* NAVBAR */
 .navbar {
     width:100%;
     max-width: var(--max--width--document);
@@ -179,7 +184,6 @@ section {
 
 }
 
-/* comente y modifique li para poder agregar lineas rectas */
 .navbar__links li {
     width:60%;
     text-align: center;
@@ -219,7 +223,7 @@ section {
     display:none;
 }
 
-
+/* end NAVBAR */
 
 
 /* HERO SECTION */
@@ -284,8 +288,6 @@ que en cerca de los 650px haga wrapping
     gap: 1rem;
 }
 
-
-
 .servicos__gallery .card {
     width:100%;
     display: grid;
@@ -308,14 +310,7 @@ que en cerca de los 650px haga wrapping
     display: block;
 }
 
-/* por alguna razon la imagen tiene margen extra,
-resto margin-botom para la primera card */
-/* .servicos__gallery .card:first-child .card__image__container img {
-    margin-bottom: -2rem;
-} */
-
 .card__body{
-    /* margin-top: 20px; */
     height: 100%;
     line-height: 1.4;
 }
@@ -323,24 +318,18 @@ resto margin-botom para la primera card */
     margin-top:0;
 }
 
-
-
-
 .wave {
     position:absolute;
     bottom:0;
     left:0;
-
     width:100%;
-       
 }
-
 /* end servicos section   */
 
 
 /* FAQ SECTION */
 .faq__section {
-    background-color: var(--color--blue);
+    background-image: linear-gradient(var(--color--blue),#00008b);
 }
 
 .accordion {
@@ -400,14 +389,15 @@ resto margin-botom para la primera card */
     background-color: var(--color--blue);
     position: relative;
 
-    --section--padding--bottom: 80px;
-    --pagination--margin--bottom: 50px;
+    --section--padding--bottom: 60px;
+    --pagination--margin--bottom: 65px;
     --carrusel--height:400px;
-
 
     padding-bottom: var(--section--padding--bottom);
     overflow: hidden;
 }
+
+
 .section__valoraciones .subtitle {
     line-height: 1.4;
     max-width: 800px;
@@ -415,7 +405,7 @@ resto margin-botom para la primera card */
 }
 .big__container__swiper {
     width:100%;
-    
+    position:relative;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -484,13 +474,14 @@ resto margin-botom para la primera card */
     width: 95%;
 }
 
+
 .swiper-pagination {
     /* aplicando margin con variable definida en .section__valoraciones */
-    transform:translateY(calc((-1* var(--section--padding--bottom)) + var(--pagination--margin--bottom)));
+    transform:translateY( var(--pagination--margin--bottom));
 
 }
 .swiper-pagination-bullet-active {
-    background-color: var(--color--pink);
+    background-color: var(--color--yellow);
     transform: translateY(3px);
     height: 15px;
     width: 15px;
@@ -501,30 +492,29 @@ resto margin-botom para la primera card */
     display: none;
 } */
 
+.btn-maps {
+    margin-top: 100px;
+}
+
 .swiper-button-prev::after, .swiper-button-next::after {
     display: none;
 }
 .swiper-button-prev img, .swiper-button-next img {
     border-radius:50%;
-    background-color: rgba(0,0,0,0);
+    transform: scale(1.25);
+    background-color: ghostwhite;
     transition: 0.5s ease transform, 0.5s ease background-color ;
 }
 .swiper-button-prev img:hover, .swiper-button-next img:hover{
-    transform: scale(1.25);
-    background-color: ghostwhite;
+    transform: scale(1.5);
+    background-color: var(--color--yellow);
 }
-
-
 /* end VALORACIONES section */
 
 /* CONTATO SECTION */
 .contato__section {
     background-image: var(--background--image);
-    /* background-color: #0824b4;
-    opacity: 0.8;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0824b4 10px ),
-     repeating-linear-gradient( #1D95EB55, #1D95EB );
-    padding: 0; */
+    
 }
 /* .mask {
     background-color: rgba(255,255,255,0.4);
@@ -584,6 +574,37 @@ resto margin-botom para la primera card */
 }
 /* end CONTATO section */
 
+/* FOOTER */
+footer {
+    
+    min-height: 20vh;
+    background-color: #00008b;
+opacity: 1;
+background: radial-gradient(circle, transparent 20%, #00008b 20%, #00008b 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #00008b 20%, #00008b 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#eb2971 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #eb2971 1.4000000000000001px, #00008b 1.4000000000000001px) -0.7000000000000001px 0;
+background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+}
+footer .title {
+    margin-bottom: 10px;
+    color:white;
+    text-shadow: none;
+}
+/* end FOOTER */
+.redes li a {
+    font-size: 3rem;
+    color:white;
+    cursor:pointer;
+}
+
+.firma {
+    font-size: 1rem;
+    margin-top:1rem;
+    color:white;
+}
+
+.firma i {
+    color: white;
+}
+
 /* TABLETS */
 @media (max-width: 900px) {
     .navbar__links li a:hover {
@@ -599,6 +620,9 @@ resto margin-botom para la primera card */
     }
     .hamburguer {
         display:block;
+        color: #9c1244;
+        border: 2px solid #9c1244;
+        background-color: white;
     }
     .navbar__links {
         background-image:var(--navbar--background--wrap);

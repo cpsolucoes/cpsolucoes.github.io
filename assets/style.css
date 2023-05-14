@@ -388,7 +388,7 @@ resto margin-botom para la primera card */
   
   
   .accordion-content.active {
-    max-height: 80px;
+    max-height: 180px;
     padding:10px;
   }
 
@@ -679,19 +679,6 @@ resto margin-botom para la primera card */
         top:100px;
         right:40px;
 
-    }
-
-    .navbar__links.active {
-        height: 250px;
-    }
-
-    
-    
-    .navbar__links li {
-        border-bottom: 2px solid gray;
-    }
-    .navbar__links li:last-child {
-        border-bottom: none;
     }
 
     /* HERO SECTION */

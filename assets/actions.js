@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded",() => {
 });
 
 
-    // 
+    // MODIFICANDO NAVBAR DE GOOGLE
+    document.querySelector("#atIdViewHeader").style.display = "none";
 })
 
 

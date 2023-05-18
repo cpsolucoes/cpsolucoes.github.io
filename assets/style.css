@@ -656,7 +656,10 @@ footer .title {
     color:white;
     text-shadow: none;
 }
-/* end FOOTER */
+.redes {
+    justify-content: space-evenly;
+    min-width: 250px;
+}
 .redes li a {
     font-size: 3rem;
     color:white;
@@ -673,6 +676,7 @@ footer .title {
     color: white;
 }
 
+/* end FOOTER */
 /* TABLETS */
 @media (max-width: 900px) {
     .navbar__links li a:hover {
@@ -723,7 +727,7 @@ footer .title {
 
     /* HERO SECTION */
     .btn-hero {
-        margin-top: unset;
+        margin-top: 15px;
     }
     .hero__text__container :is(h1,p) {
         text-align: center;

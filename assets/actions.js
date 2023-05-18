@@ -47,8 +47,29 @@ document.addEventListener("DOMContentLoaded",() => {
 });
 
 
-    // MODIFICANDO NAVBAR DE GOOGLE
-    document.querySelector("#atIdViewHeader").style.display = "none";
+    // POP-UPS
+    const buttons = document.querySelectorAll('.mas__informacion');
+        let isPop = false;
+        
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => {
+            if (!isPop) {
+              const meta = button.getAttribute('data-meta');
+              
+              const popUp = document.querySelector(meta);
+              popUp.classList.add('active');
+              
+              isPop = true;
+            }
+          });
+        });
+        const closeBtns = document.querySelectorAll(".close-btn");
+        closeBtns.forEach((closebtn) => {
+            closebtn.addEventListener("click", () => {
+                console.log(closebtn.parentNode.classList.remove("active"));
+                isPop = false;
+            });
+        });
 })
 
 
